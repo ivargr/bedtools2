@@ -59,6 +59,7 @@ void groupby_help();
 void intersect_help();
 void map_help();
 void jaccard_help(); //
+void forbes_help(); //
 void fisher_help();
 int links_main(int argc, char* argv[]);//
 int maskfastafrombed_main(int argc, char* argv[]);//
@@ -259,6 +260,7 @@ int bedtools_help(void)
     cout  << endl;
     cout  << "[ Statistical relationships ]" << endl;
     cout  << "    jaccard       "  << "Calculate the Jaccard statistic b/w two sets of intervals.\n";
+    cout  << "    forbes       "  << "Calculate the Forbes statistic b/w two sets of intervals.\n";
     cout  << "    reldist       "  << "Calculate the distribution of relative distances b/w two files.\n";
     cout  << "    fisher        "  << "Calculate Fisher statistic b/w two feature files.\n";
 
@@ -308,6 +310,8 @@ void showHelp(const string &subCmd) {
 		merge_help();
 	} else if (subCmd == "jaccard") {
 		jaccard_help();
+	} else if (subCmd == "forbes") {
+		forbes_help();
 	} else if (subCmd == "subtract") {
 		subtract_help();
 	} else if (subCmd == "sample") {

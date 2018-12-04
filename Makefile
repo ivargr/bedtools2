@@ -49,6 +49,7 @@ SUBDIRS = $(SRC_DIR)/annotateBed \
 		  $(SRC_DIR)/expand \
 		  $(SRC_DIR)/fastaFromBed \
 		  $(SRC_DIR)/flankBed \
+		  $(SRC_DIR)/forbes \
 		  $(SRC_DIR)/genomeCoverageBed \
 		  $(SRC_DIR)/getOverlap \
 		  $(SRC_DIR)/groupBy \

@@ -46,6 +46,7 @@ INCLUDES = -I$(UTILITIES_DIR)/bedFile/ \
 			-I$(TOOLS_DIR)/intersectFile/ \
 			-I$(TOOLS_DIR)/fisher/ \
 			-I$(TOOLS_DIR)/jaccard/ \
+			-I$(TOOLS_DIR)/forbes/ \
 			-I$(TOOLS_DIR)/linksBed/ \
 			-I$(TOOLS_DIR)/maskFastaFromBed/ \
 			-I$(TOOLS_DIR)/mapFile/ \

@@ -18,6 +18,7 @@
 #include "closestFile.h"
 #include "mergeFile.h"
 #include "jaccard.h"
+#include "forbes.h"
 #include "subtractFile.h"
 #include "sampleFile.h"
 #include "spacingFile.h"
@@ -33,6 +34,7 @@ BedtoolsDriver::BedtoolsDriver()
 	_supported.insert("closest");
 	_supported.insert("merge");
 	_supported.insert("jaccard");
+	_supported.insert("forbes");
 	_supported.insert("subtract");
 	_supported.insert("sample");
 	_supported.insert("spacing");
@@ -100,6 +102,8 @@ ContextBase *BedtoolsDriver::getContext()
 		context = new ContextMerge();
 	} else if (_subCmd == "jaccard") {
 		context = new ContextJaccard();
+	} else if (_subCmd == "forbes") {
+		context = new ContextJaccard();
 	} else if (_subCmd == "closest") {
 		context = new ContextClosest();
 	} else if (_subCmd == "subtract") {
@@ -135,6 +139,8 @@ ToolBase *BedtoolsDriver::getTool(ContextBase *context)
 	} else if (_subCmd == "merge") {
 		tool = new MergeFile(static_cast<ContextMerge *>(context));
 	} else if (_subCmd == "jaccard") {
+		tool = new Jaccard(static_cast<ContextJaccard *>(context));
+	} else if (_subCmd == "forbes") {
 		tool = new Jaccard(static_cast<ContextJaccard *>(context));
 	} else if (_subCmd == "subtract") {
 		tool = new SubtractFile(static_cast<ContextSubtract *>(context));
