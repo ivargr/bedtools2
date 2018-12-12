@@ -12,3 +12,6 @@ src/utils/version/version_git.h
 .cproject
 nbproject
 sandbox
+*.swp
+*.bam
+o

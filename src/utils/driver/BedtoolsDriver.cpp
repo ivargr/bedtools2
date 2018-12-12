@@ -7,6 +7,7 @@
 #include "ContextMap.h"
 #include "ContextSample.h"
 #include "ContextJaccard.h"
+#include "ContextForbes.h"
 #include "ContextClosest.h"
 #include "ContextSubtract.h"
 #include "ContextSpacing.h"
@@ -103,7 +104,7 @@ ContextBase *BedtoolsDriver::getContext()
 	} else if (_subCmd == "jaccard") {
 		context = new ContextJaccard();
 	} else if (_subCmd == "forbes") {
-		context = new ContextJaccard();
+		context = new ContextForbes();
 	} else if (_subCmd == "closest") {
 		context = new ContextClosest();
 	} else if (_subCmd == "subtract") {
@@ -141,7 +142,7 @@ ToolBase *BedtoolsDriver::getTool(ContextBase *context)
 	} else if (_subCmd == "jaccard") {
 		tool = new Jaccard(static_cast<ContextJaccard *>(context));
 	} else if (_subCmd == "forbes") {
-		tool = new Jaccard(static_cast<ContextJaccard *>(context));
+		tool = new Forbes(static_cast<ContextForbes *>(context));
 	} else if (_subCmd == "subtract") {
 		tool = new SubtractFile(static_cast<ContextSubtract *>(context));
 	} else if (_subCmd == "sample") {
